@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "schedule": {
+        "type": "simple",
+        "interval": "1s"
+    },
+    "max-failures": 10,
+    "workflow": {
+        "collect": {
+            "metrics": {
+                "/intel/slack/event": {}
+            },
+            "config": {
+                "/intel/slack": {
+                    "token": "INSERT_YOUR_TOKEN_HERE"
+                }
+            },
+             "publish": [
+                        {
+                            "plugin_name": "file",                            
+                            "config": {
+                                "file": "/tmp/published_slack.json"
+                            }
+                        }
+                    ] 
+      }
+   }
+}
