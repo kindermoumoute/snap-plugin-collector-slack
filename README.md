@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/intelsdi-x/snap-plugin-collector-slack.svg?branch=master)](https://travis-ci.com/intelsdi-x/snap-plugin-collector-slack)
+[![Build Status](https://travis-ci.com/kindermoumoute/snap-plugin-collector-slack.svg?branch=master)](https://travis-ci.com/kindermoumoute/snap-plugin-collector-slack)
 
 # snap collector plugin - Slack
 This plugin collects Slack events from the Slack API.
@@ -36,7 +36,7 @@ You can get the pre-built binaries for your OS and architecture at snap's [GitHu
 Download the repository with Go:
 
 ```
-$ go get -d github.com/intelsdi-x/snap-plugin-collector-slack
+$ go get -d github.com/kindermoumoute/snap-plugin-collector-slack
 ```
 
 Build the plugin by running make within the cloned repo:
@@ -55,13 +55,13 @@ There are a number of other resources you can review to learn to use this plugin
 
 * [Slack API](https://api.slack.com)
 * [Slack Event documentation](https://api.slack.com/events-api#event_types)
-* [snap Slack unit test](https://github.com/intelsdi-x/snap-plugin-collector-slack/blob/master/slack/slack_small_test.go)
+* [snap Slack unit test](https://github.com/kindermoumoute/snap-plugin-collector-slack/blob/master/slack/slack_small_test.go)
 * [snap Slack examples](#examples)
 
 
 ### Collected Metrics
 This plugin has the ability to gather a Slack event as a metric.
-* Namespace: `/intel/slack/event`
+* Namespace: `/kindermoumoute/slack/event`
 * Data: data is the event type (see [Slack event documentation](https://api.slack.com/events-api#event_types)).
 * Tags: generate a tag for each existing data returned by the event.
 
@@ -100,10 +100,10 @@ Create a task manifest file (e.g. `task.json`):
     "workflow": {
         "collect": {
             "metrics": {
-                "/intel/slack/event": {}
+                "/kindermoumoute/slack/event": {}
             },
             "config": {
-                "/intel/slack": {
+                "/kindermoumoute/slack": {
                     "token": "INSERT_YOUR_TOKEN_HERE"
                 }
             },
@@ -145,10 +145,10 @@ See file output (this is just part of the file):
 ```json
 null
 null
-[ {"timestamp":"2016-08-24T18:55:31.926246288-07:00","namespace":"/intel/slack/event","data":"presence_change","unit":"","tags":{"plugin_running_on":"ocano-mac01.jf.intel.com","presence":"active","type":"presence_change","user":"U063H8QUB"},"version":0,"last_advertised_time":"0001-01-01T00:00:00Z"},
-  {"timestamp":"2016-08-24T18:55:32.579676428-07:00","namespace":"/intel/slack/event","data":"user_typing","unit":"","tags":{"channel":"C2136PUKT","plugin_running_on":"ocano-mac01.jf.intel.com","type":"user_typing","user":"U12LSMG85"},"version":0,"last_advertised_time":"0001-01-01T00:00:00Z"}]
+[ {"timestamp":"2016-08-24T18:55:31.926246288-07:00","namespace":"/kindermoumoute/slack/event","data":"presence_change","unit":"","tags":{"plugin_running_on":"ocano-mac01.jf.intel.com","presence":"active","type":"presence_change","user":"U063H8QUB"},"version":0,"last_advertised_time":"0001-01-01T00:00:00Z"},
+  {"timestamp":"2016-08-24T18:55:32.579676428-07:00","namespace":"/kindermoumoute/slack/event","data":"user_typing","unit":"","tags":{"channel":"C2136PUKT","plugin_running_on":"ocano-mac01.jf.intel.com","type":"user_typing","user":"U12LSMG85"},"version":0,"last_advertised_time":"0001-01-01T00:00:00Z"}]
 null
-[ {"timestamp":"2016-08-24T18:55:34.509201456-07:00","namespace":"/intel/slack/event","data":"message","unit":"","tags":{"msg-channel":"C2136PUKT","msg-isstarred":"false","msg-text":"plop","msg-timestamp":"1472090134.000049","msg-type":"message","msg-user":"U12LSMG85","plugin_running_on":"ocano-mac01.jf.intel.com"},"version":0,"last_advertised_time":"0001-01-01T00:00:00Z"}]
+[ {"timestamp":"2016-08-24T18:55:34.509201456-07:00","namespace":"/kindermoumoute/slack/event","data":"message","unit":"","tags":{"msg-channel":"C2136PUKT","msg-isstarred":"false","msg-text":"plop","msg-timestamp":"1472090134.000049","msg-type":"message","msg-user":"U12LSMG85","plugin_running_on":"ocano-mac01.jf.intel.com"},"version":0,"last_advertised_time":"0001-01-01T00:00:00Z"}]
 ```
 
 Stop task:
@@ -159,7 +159,7 @@ ID: 02dd7ff4-8106-47e9-8b86-70067dc0a850
 ```
 
 ### Roadmap
-There isn't a current roadmap for this plugin, but it is in active development. As I launch this plugin, I do not have any outstanding requirements for the next release. If you have a feature request, please add it as an [issue](https://github.com/intelsdi-x/snap-plugin-collector-slack/issues/new) and/or submit a [pull request](https://github.com/intelsdi-x/snap-plugin-collector-slack/pulls).
+There isn't a current roadmap for this plugin, but it is in active development. As I launch this plugin, I do not have any outstanding requirements for the next release. If you have a feature request, please add it as an [issue](https://github.com/kindermoumoute/snap-plugin-collector-slack/issues/new) and/or submit a [pull request](https://github.com/kindermoumoute/snap-plugin-collector-slack/pulls).
 
 ## Community Support
 This repository is one of **many** plugins in **snap**, a powerful telemetry framework. See the full project at http://github.com/intelsdi-x/snap To reach out to other users, head to the [main framework](https://github.com/intelsdi-x/snap#community-support)

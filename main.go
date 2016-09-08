@@ -1,7 +1,7 @@
 /*
 http://www.apache.org/licenses/LICENSE-2.0.txt
 
-Copyright 2015 Intel Corporation
+
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -21,8 +21,8 @@ package main
 import (
 	"os"
 
-	"github.com/intelsdi-x/snap-plugin-collector-slack/slack"
 	"github.com/intelsdi-x/snap/control/plugin"
+	"github.com/kindermoumoute/snap-plugin-collector-slack/slack"
 )
 
 func main() {

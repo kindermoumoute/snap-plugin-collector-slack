@@ -8,11 +8,12 @@
     "workflow": {
         "collect": {
             "metrics": {
-                "/intel/slack/event": {}
+                "/kindermoumoute/slack/event": {}
             },
             "config": {
-                "/intel/slack": {
-                    "token": "INSERT_YOUR_TOKEN_HERE"
+                "/kindermoumoute/slack": {
+                    "token": "INSERT_YOUR_TOKEN_HERE",
+                    "max_element": 400
                 }
             },
              "publish": [

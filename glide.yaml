@@ -1,4 +1,4 @@
-package: github.com/intelsdi-x/snap-plugin-collector-slack
+package: github.com/kindermoumoute/snap-plugin-collector-slack
 import:
 - package: github.com/intelsdi-x/snap
   version: ^0.15.0-beta
