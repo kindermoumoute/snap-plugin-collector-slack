@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "schedule": {
+        "type": "simple",
+        "interval": "1s"
+    },
+    "max-failures": 10,
+    "workflow": {
+        "collect": {
+            "metrics": {
+                "/kindermoumoute/slack/event": {}
+            },
+            "config": {
+                "/kindermoumoute/slack": {
+                    "token": "INSERT_YOUR_TOKEN_HERE",
+                    "max_element": 400
+                }
+            },
+             "publish": [
+                        {
+                            "plugin_name": "file",                            
+                            "config": {
+                                "file": "/tmp/published_slack.json"
+                            }
+                        }
+                    ] 
+      }
+   }
+}
