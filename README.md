@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/kindermoumoute/snap-plugin-collector-slack.svg?branch=master)](https://travis-ci.com/kindermoumoute/snap-plugin-collector-slack)
+[![Build Status](https://travis-ci.org/kindermoumoute/snap-plugin-collector-slack.svg?branch=master)](https://travis-ci.org/kindermoumoute/snap-plugin-collector-slack)
 
 # snap collector plugin - Slack
 This plugin collects Slack events from the Slack API.
